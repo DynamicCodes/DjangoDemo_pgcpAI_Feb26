@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- above for using dtl jinja though base.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calc app</title>
+</head>
+<body>
+<h1> Hello {{ name }}</h1>
+
+<form action ="add" method="post">  <!-- for adding 2nums, showung result in resutl.html page -->
+
+    {% csrf_token %}  <!-- for POST method -->
+    Enter 1st number : <input type="text" name="num1"><br>
+    Enter 2nd number : <input type="text" name="num2"><br>
+    <input type="submit">
+</form>
+</body>
+</html>
+
+{% endblock %}
