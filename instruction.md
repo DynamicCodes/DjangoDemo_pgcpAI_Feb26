@@ -1,10 +1,17 @@
-to run first app :- python manage.py runserver
+step 1:- check django installed :- django-admin --version
+                                 - pip install django
+  go to folder,create a django project - django-admin startproject projectName
 
-create the first app -> python manage.py startapp appName
 
-create urls.py in your app for routing for the app
+step 2 :- to run first app :- python manage.py runserver
 
-register your paths of app in main app urls.
+        - create the first app -> python manage.py startapp calc (appName)
+
+step 3 :- create urls.py in your app for routing for the app
+
+        - register your paths of app in main calc urls.
+        - create the home page in views.py
+        - register the url in MAIN app URLS
 
 enable jinja plugin for dtl
 
