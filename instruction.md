@@ -14,6 +14,7 @@ step 3 :- create urls.py in your app for routing for the app
         - register the url in MAIN app URLS
 
 step 4 :- make a templete folder
+
         - create home.html file
         - add in dir template section of settings.py file this =>  'DIRS': [BASE_DIR / 'templates']
         - now from calc views return the home.html 
