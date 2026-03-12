@@ -19,21 +19,51 @@ step 4 :- make a templete folder
         - add in dir template section of settings.py file this =>  'DIRS': [BASE_DIR / 'templates']
         - now from calc views return the home.html 
 
-enable jinja plugin for dtl
+step 5:- create base.html file for jinja patern
 
-for travel templete:- copy the index in template folder
+      - if jinja is not recognized then add the plugin from extension for DTL.
+      - add the { } to home.html
 
-create urls in the new app travel
 
-copy other static files in the new static folder
+step 6:- for adding 2 numbers
+        
+        - add form tag in home.html
+        - create result.html for showing addition result.
+        - in calc.urls register add mapping.
+        - in views create the add function to add 2 numbers, start with GET method
+        - change GET to POST method with csrf token.
 
-add path in settings.py
+step 7 :- static files (Travello Files)      
 
-after creating static files :-  python .\manage.py collectstatic
+          - create a new app, python manage.py startapp travello
+          - copy the index.html to template folder
+          - create urls.py in travello folder
+          - create function in travello VIEW file
+          - update the main app urls with travello
 
-add {% load static %} in index.html and add {% static 'static url' %} in href's and src
+step 8 :-  create folder static for static files
 
-create models in travel/models for dynamic adding values
+          - copy all in static folder.
+          - add path in settings.py ( if not present)             
+          - after creating static files :-  python .\manage.py collectstatic
+
+step 9 :- add {% load static %} in index.html and add {% static 'static url' %} in href's and src
+
+step 10 :- create models in travel/models for dynamic adding values
+
+          - create variable => id: int ....
+
+          - create object in view.py
+          - pass object frm the return => {'des1':des1}
+          - go to index.html line no 340, add {{ des1.name }} for object details display
+
+# can also send multiple objects in a line => dest = [des1, des2]      
+
+step 11 :-  add FOR loop for the above objects in index.html
+
+step 12 :- in index top add {% static "images" as baseUrl %} for images in the card.
+
+           add in image src => {{baseUrl}}/{{dest.image}}
 
 show if else in index.html
 
