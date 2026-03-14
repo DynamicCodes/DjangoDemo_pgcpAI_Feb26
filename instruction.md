@@ -65,26 +65,35 @@ step 12 :- in index top add {% static "images" as baseUrl %} for images in the c
 
            add in image src => {{baseUrl}}/{{dest.image}}
 
-show if else in index.html
+step13 :- show if else in index.html
 
-connect DB, settings line 76
+step 14 :- connect DB, settings.py => line 76
 
-connector => pip install psycopg2
+           connector => pip install psycopg2
+           udate models.py for db models
+           -ref for fields = > https://docs.djangoproject.com/en/6.0/ref/models/fields/
+           
 
+step 15 :- FOR DB MIGRATION
 
-add in settings installed apps => 'travel.apps.TravelConfig',
-commadn to migrate the model to DB  => python manage.py makemigrations
+          - add in settings installed apps Line 33 => 'travel.apps.TravelConfig',
+          - commadn to migrate the model to DB  => python manage.py makemigrations
 
-for doing sql migration to DB tables :=> python .\manage.py sqlmigrate travel 0001
-                                     =>  python .\manage.py migrate
+step 16 :- 
 
-
-create a super user for admin => python manage.py createsuperuser
-user=> david
-mail=> cdac mail
-pass => root
-
-add Destination in admin.py in travel app
+          - for doing/showing sql migration to DB tables :=> python .\manage.py sqlmigrate travel 0001
+         =>  python .\manage.py migrate
 
 
-for fetching data from DB =>add in views.py =>  Destination.objects.all()
+setp 17 :- for entering data from admin, create a super user
+            
+            - create a super user for admin => python manage.py createsuperuser
+              user=> david
+              mail=> cdac mail
+              pass => root
+
+step 18 :- add Destination in admin.py in travel app for showing in admin panel
+           , add destinations in the admin UI
+
+
+step 19 :- for fetching data from DB =>add in views.py =>  Destination.objects.all()
